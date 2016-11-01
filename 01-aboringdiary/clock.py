@@ -22,7 +22,7 @@ chapter = 0
 
 for hour in range(0, 24):
     chapter += 1
-    out.append("\n\nChapter {}\n\n".format(chapter))
+    out.append("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nChapter {}\n\n".format(chapter))
 
     for minute in range(0, 60):
         for second in range(0, 60):

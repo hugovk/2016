@@ -1,6 +1,6 @@
 # NaNoGenMo 2016
 
-My entries for this year's NaNoGenMo.
+My entries for this year's NaNoGenMo: https://github.com/NaNoGenMo/2016/issues/20.
 
 Original blurb below, and see also https://github.com/NaNoGenMo/2016.
 

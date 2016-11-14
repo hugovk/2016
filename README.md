@@ -1,5 +1,11 @@
 # NaNoGenMo 2016
 
+My entries for this year's NaNoGenMo.
+
+Original blurb below, and see also https://github.com/NaNoGenMo/2016.
+
+---
+
 National Novel Generation Month - based on [an idea Darius tweeted on a whim](https://twitter.com/tinysubversions/status/396305662000775168), where people are challenged to write code that writes a novel.
 
 This is the 2016 edition. For previous years see:
@@ -25,11 +31,11 @@ This activity starts at 12:01am GMT on Nov 1st and ends at 12:01am GMT Dec 1st.
 
 ## How to Participate
 
-[Open an issue](../../issues/new) on this repo and declare your intent to participate. _If you already have some inkling of the kind of project you'll be doing, please title your issue accordingly._ You may continually update the issue as you work over the course of the month. Feel free to post dev diaries, sample output, etc.
+[Open an issue](https://github.com/NaNoGenMo/2016/issues/new) on this repo and declare your intent to participate. _If you already have some inkling of the kind of project you'll be doing, please title your issue accordingly._ You may continually update the issue as you work over the course of the month. Feel free to post dev diaries, sample output, etc.
 
 If you have more than one project you're attempting, feel free to post a new issue for that project and keep that one up to date as well.
 
-Also feel free to comment on [other participants' issues](../../issues).
+Also feel free to comment on [other participants' issues](https://github.com/NaNoGenMo/2016/issues).
 
 ## Admins
 
@@ -37,7 +43,7 @@ Official admins for NaNoGenMo are @dariusk, @hugovk, @MichaelPaulukonis, and @me
 
 ## Resources
 
-There's [an open issue](../../issues/1) where you can add resources (libraries, corpuses, APIs, techniques, etc).
+There's [an open issue](https://github.com/NaNoGenMo/2016/issues/1) where you can add resources (libraries, corpuses, APIs, techniques, etc).
 
 There are already a ton of resources on the old resources threads for the [2013 edition](https://github.com/dariusk/NaNoGenMo/issues/11), the [2014 edition](https://github.com/dariusk/nanogenmo-2014/issues/1), and the [2015 edition](https://github.com/dariusk/NaNoGenMo-2015/issues/1).
 

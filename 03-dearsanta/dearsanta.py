@@ -25,6 +25,7 @@ import argparse
 from twitter.stream import TwitterStream  # , Timeout, HeartbeatTimeout, Hangup
 from twitter.oauth import OAuth
 from twitter.util import printNicely
+from six.moves.html_parser import HTMLParser  # pip install six
 
 
 def intro():
@@ -108,6 +109,7 @@ def parse_arguments():
 
 def main():
     args = parse_arguments()
+    htmlparser = HTMLParser()
 
     first_one = True
     word_count = 0
@@ -157,6 +159,8 @@ def main():
         elif tweet.get('text'):
             processed = process_tweet(tweet['text'], args.track_keywords)
             if processed:
+                # &amp; -> & etc.
+                processed = htmlparser.unescape(processed)
                 if first_one:
                     first_one = False
                     keep_one_back = processed

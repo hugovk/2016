@@ -1,5 +1,7 @@
 # Dear Santa,
 
+<img src="https://hugovk.github.io/NaNoGenMo-2016/03-dearsanta/dearsanta.jpg" alt="Santa Claus readings letters: Christmas, Florida" width="400">
+
 *A contemporary epistolary novel generated from the crowd*
 
 Things people on Twitter want.

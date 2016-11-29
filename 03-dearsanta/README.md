@@ -10,11 +10,11 @@ A joint entry for [NaNoGemMo](https://github.com/NaNoGenMo/2016) ("write code th
 
 ## Generated output
 
-* [6th November 2016](03-dearsanta/2016-11-06.txt) (51,181 words)
-* [9th November 2016, during a US presidential election victory speech](03-dearsanta/2016-11-09a-victoryspeech.txt) (19,358 words)
-* [9th November 2016, on US presidential election results day](03-dearsanta/2016-11-09b-resultsday.txt) (51,177 words)
-* [24th November 2016, Thanksgiving](03-dearsanta/2016-11-24-thanksgiving.txt) (51,166 words)
-* [25th November 2016, Black Friday](03-dearsanta/2016-11-25-blackfriday.txt) (51,150 words)
+* [6th November 2016](2016-11-06.txt) (51,181 words)
+* [9th November 2016, during a US presidential election victory speech](2016-11-09a-victoryspeech.txt) (19,358 words)
+* [9th November 2016, on US presidential election results day](2016-11-09b-resultsday.txt) (51,177 words)
+* [24th November 2016, Thanksgiving](2016-11-24-thanksgiving.txt) (51,166 words)
+* [25th November 2016, Black Friday](016-11-25-blackfriday.txt) (51,150 words)
 
 
 ## What it does

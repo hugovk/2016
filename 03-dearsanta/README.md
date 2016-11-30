@@ -6,7 +6,7 @@
 
 Things people on Twitter want.
 
-A joint entry for [NaNoGemMo](https://github.com/NaNoGenMo/2016) ("write code that writes a novel") and [PROCJAM](https://hugovk.itch.io/dear-santa) ("make things that make things").
+A joint entry for [NaNoGenMo](https://github.com/NaNoGenMo/2016) ("write code that writes a novel") and [PROCJAM](https://hugovk.itch.io/dear-santa) ("make things that make things").
 
 ## Generated output
 

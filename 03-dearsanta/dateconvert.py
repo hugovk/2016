@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# encoding: utf-8
+#!/usr/bin/env python3
 """
 Take a timestamp like:
 25/11/2016 23:05:03
@@ -15,7 +14,6 @@ Convert it to:
 26 November 2016, 06:05 JST
 26 November 2016, 08:05 AEDT
 """
-from __future__ import print_function, unicode_literals
 from dateutil.parser import parse  # pip install python-dateutil
 import argparse
 import pytz  # pip install pytz
@@ -56,7 +54,7 @@ if __name__ == "__main__":
         timezone_name = tz.localize(indate).tzname()
         local_date = localdt.astimezone(tz).strftime("%d %B %Y, %H:%M")
 
-        print("{} {}".format(local_date, timezone_name))
+        print(f"{local_date} {timezone_name}")
 
         # x = tz.localize(indate)
         # print("{} ({})".format(localdt.astimezone(tz), x.tzname()))

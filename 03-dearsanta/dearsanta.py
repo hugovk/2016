@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# encoding: utf-8
+#!/usr/bin/env python3
 """
 Dear Santa, I have been good this year and want:
 1. [from Twitter, I want [thing]],
@@ -18,14 +17,13 @@ Notes:
 https://github.com/sixohsix/twitter/blob/master/twitter/stream_example.py
 https://dev.twitter.com/streaming/reference/post/statuses/filter
 """
-from __future__ import print_function
 
 import argparse
 
 from twitter.stream import TwitterStream  # , Timeout, HeartbeatTimeout, Hangup
 from twitter.oauth import OAuth
 from twitter.util import printNicely
-from six.moves.html_parser import HTMLParser  # pip install six
+import html
 
 
 def intro():
@@ -46,7 +44,7 @@ def outro(one_more):
     print()
     print("Twitter")
     print()
-    printNicely("P.S. I almost forgot: {}".format(one_more))
+    printNicely(f"P.S. I almost forgot: {one_more}")
     print()
 
 
@@ -109,7 +107,6 @@ def parse_arguments():
 
 def main():
     args = parse_arguments()
-    htmlparser = HTMLParser()
 
     first_one = True
     word_count = 0
@@ -160,7 +157,7 @@ def main():
             processed = process_tweet(tweet['text'], args.track_keywords)
             if processed:
                 # &amp; -> & etc.
-                processed = htmlparser.unescape(processed)
+                processed = html.unescape(processed)
                 if first_one:
                     first_one = False
                     keep_one_back = processed

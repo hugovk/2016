@@ -25,7 +25,7 @@ import html
 import pytz
 from twitter.oauth import OAuth
 from twitter.stream import TwitterStream  # , Timeout, HeartbeatTimeout, Hangup
-from twitter.util import printNicely
+# from twitter.util import printNicely
 
 
 def timestamps():
@@ -79,7 +79,7 @@ def outro(one_more):
     print()
     print("Twitter")
     print()
-    printNicely(f"P.S. I almost forgot: {one_more}")
+    print(f"P.S. I almost forgot: {one_more}")
     print()
 
 
@@ -234,7 +234,7 @@ def main():
                     first_one = False
                     keep_one_back = processed
                 else:
-                    printNicely(processed)
+                    print(processed)
                 word_count += len(processed.split())
 
         if word_count > 51000:

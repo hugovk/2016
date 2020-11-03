@@ -19,11 +19,44 @@ https://dev.twitter.com/streaming/reference/post/statuses/filter
 """
 
 import argparse
+import datetime as dt
 import html
 
+import pytz
 from twitter.oauth import OAuth
 from twitter.stream import TwitterStream  # , Timeout, HeartbeatTimeout, Hangup
 from twitter.util import printNicely
+
+
+def timestamps():
+    utc_now = dt.datetime.utcnow()
+
+    us_pacific = pytz.timezone("US/Pacific")
+    us_eastern = pytz.timezone("US/Eastern")
+    london = pytz.timezone("Europe/London")
+    helsinki = pytz.timezone("Europe/Helsinki")
+    india = pytz.timezone("Asia/Calcutta")
+    china = pytz.timezone("Asia/Shanghai")
+    japan = pytz.timezone("Asia/Tokyo")
+    sydney = pytz.timezone("Australia/Sydney")
+
+    for tz in [
+        us_pacific,
+        us_eastern,
+        london,
+        pytz.UTC,
+        helsinki,
+        india,
+        china,
+        japan,
+        sydney,
+    ]:
+        timezone_name = tz.localize(utc_now).tzname()
+        local_date = (
+            pytz.utc.localize(utc_now).astimezone(tz).strftime("%d %B %Y, %H:%M")
+        )
+        print(f"{local_date} {timezone_name}")
+    print()
 
 
 def intro():
@@ -214,6 +247,7 @@ def main():
 
 
 if __name__ == "__main__":
+    timestamps()
     intro()
     one_more = main()
     outro(one_more)

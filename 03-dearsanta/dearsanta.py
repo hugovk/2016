@@ -25,7 +25,7 @@ import html
 import pytz
 from twitter.oauth import OAuth
 from twitter.stream import TwitterStream  # , Timeout, HeartbeatTimeout, Hangup
-# from twitter.util import printNicely
+from twitter.util import printNicely
 
 
 def timestamps():
@@ -55,32 +55,32 @@ def timestamps():
         local_date = (
             pytz.utc.localize(utc_now).astimezone(tz).strftime("%d %B %Y, %H:%M")
         )
-        print(f"{local_date} {timezone_name}")
-    print()
+        printNicely(f"{local_date} {timezone_name}")
+    printNicely("")
 
 
 def intro():
-    print("Dear Santa,")
-    print()
-    print("This year I have been good.")
-    print()
+    printNicely("Dear Santa,")
+    printNicely("")
+    printNicely("This year I have been good.")
+    printNicely("")
 
 
 def outro(one_more):
-    print()
-    print(
+    printNicely("")
+    printNicely(
         "Thank you Santa, I hope you can fit all these things in your "
         "sleigh and down the chimney."
     )
-    print()
-    print("I hope the reindeer are well.")
-    print()
-    print("Love,")
-    print()
-    print("Twitter")
-    print()
-    print(f"P.S. I almost forgot: {one_more}")
-    print()
+    printNicely("")
+    printNicely("I hope the reindeer are well.")
+    printNicely("")
+    printNicely("Love,")
+    printNicely("")
+    printNicely("Twitter")
+    printNicely("")
+    printNicely(f"P.S. I almost forgot: {one_more}")
+    printNicely("")
 
 
 def split_from(target, text):
@@ -234,7 +234,7 @@ def main():
                     first_one = False
                     keep_one_back = processed
                 else:
-                    print(processed)
+                    printNicely(processed)
                 word_count += len(processed.split())
 
         if word_count > 51000:

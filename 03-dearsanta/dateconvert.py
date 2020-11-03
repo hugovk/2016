@@ -14,9 +14,10 @@ Convert it to:
 26 November 2016, 06:05 JST
 26 November 2016, 08:05 AEDT
 """
-from dateutil.parser import parse  # pip install python-dateutil
 import argparse
+
 import pytz  # pip install pytz
+from dateutil.parser import parse  # pip install python-dateutil
 
 
 def utc_to_local(utc_dt, local_tz):
@@ -27,30 +28,38 @@ def utc_to_local(utc_dt, local_tz):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Convert a timestamp into eight others.",
-        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument(
-        'timestamp',
-        help="Input timestamp")
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+    )
+    parser.add_argument("timestamp", help="Input timestamp")
     args = parser.parse_args()
 
     # print(args.timestamp)
     indate = parse(args.timestamp, dayfirst=True, yearfirst=False)
 
-    local_tz = pytz.timezone('Europe/Helsinki')
+    local_tz = pytz.timezone("Europe/Helsinki")
     # print(indate, local_tz)
 
     localdt = local_tz.localize(indate)
 
-    us_pacific = pytz.timezone('US/Pacific')
-    us_eastern = pytz.timezone('US/Eastern')
-    london = pytz.timezone('Europe/London')
-    india = pytz.timezone('Asia/Calcutta')
-    china = pytz.timezone('Asia/Shanghai')
-    japan = pytz.timezone('Asia/Tokyo')
-    sydney = pytz.timezone('Australia/Sydney')
+    us_pacific = pytz.timezone("US/Pacific")
+    us_eastern = pytz.timezone("US/Eastern")
+    london = pytz.timezone("Europe/London")
+    india = pytz.timezone("Asia/Calcutta")
+    china = pytz.timezone("Asia/Shanghai")
+    japan = pytz.timezone("Asia/Tokyo")
+    sydney = pytz.timezone("Australia/Sydney")
 
-    for tz in [us_pacific, us_eastern, london, pytz.UTC, local_tz, india,
-               china, japan, sydney]:
+    for tz in [
+        us_pacific,
+        us_eastern,
+        london,
+        pytz.UTC,
+        local_tz,
+        india,
+        china,
+        japan,
+        sydney,
+    ]:
         timezone_name = tz.localize(indate).tzname()
         local_date = localdt.astimezone(tz).strftime("%d %B %Y, %H:%M")
 
